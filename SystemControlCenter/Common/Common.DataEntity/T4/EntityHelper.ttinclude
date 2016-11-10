@@ -1,0 +1,277 @@
+﻿ <#@ assembly name="System.Core"#>
+ <#@ assembly name="System.Data"#>
+ <#@ assembly name="$(SolutionDir)\Libs\MySql.Data.dll" #>
+ <#@ import namespace="MySql.Data.MySqlClient" #>
+ <#@ import namespace="System" #>
+ <#@ import namespace="System.Data" #>
+ <#@ import namespace="System.Collections.Generic" #>
+ <#@ import namespace="System.Linq" #>
+ <#@ import namespace="MySql.Data.MySqlClient" #>
+ <#@ import namespace="System.Text.RegularExpressions" #>
+ <#+
+     public class EntityHelper
+     {
+         public static List<Entity> GetEntities(string connectionString, List<string> databases)
+         {
+             var list = new List<Entity>();
+             var conn = new MySqlConnection(connectionString);
+             try
+             {
+                 conn.Open();
+                 var dbs = string.Join("','", databases.ToArray());
+                 var cmd = string.Format(@"SELECT `information_schema`.`COLUMNS`.`TABLE_SCHEMA`
+                                                     ,`information_schema`.`COLUMNS`.`TABLE_NAME`
+                                                     ,`information_schema`.`COLUMNS`.`COLUMN_NAME`
+                                                     ,`information_schema`.`COLUMNS`.`DATA_TYPE`
+                                                     ,`information_schema`.`COLUMNS`.`COLUMN_COMMENT`
+													 ,`information_schema`.`COLUMNS`.`COLUMN_Key`
+													 ,`information_schema`.`COLUMNS`.`EXTRA`
+													 ,`information_schema`.`COLUMNS`.`IS_NULLABLE`
+                                                 FROM `information_schema`.`COLUMNS`
+                                                 WHERE `information_schema`.`COLUMNS`.`TABLE_SCHEMA` IN ('{0}') ", dbs);
+                 using (var reader = MySqlHelper.ExecuteReader(conn, cmd))
+                 {
+                     while (reader.Read())
+                     {
+                         var db = reader["TABLE_SCHEMA"].ToString();
+                         var table = reader["TABLE_NAME"].ToString();
+                         var column = reader["COLUMN_NAME"].ToString();
+                         var type =  reader["DATA_TYPE"].ToString();
+						  var isKey =  reader["COLUMN_Key"].ToString() == "PRI";
+						  var isAutoIncr =  reader["EXTRA"].ToString() == "auto_increment";
+						  var isNotNull = reader["IS_NULLABLE"].ToString() == "NO";
+                         var comment = reader["COLUMN_COMMENT"].ToString().Replace(System.Environment.NewLine, "");
+						 comment = new System.Text.RegularExpressions.Regex("[\\s]+").Replace(comment, " ");
+                         var entity = list.FirstOrDefault(x => x.TableName == table);
+                         if(entity == null)
+                         {
+							var entityName = StringUtils.ToFirstUpper(StringUtils.ToSingular(table));
+                             entity = new Entity(entityName,table);
+                             entity.Fields.Add(new Field
+                             {
+                                 Name = column,
+                                 Type = GetCLRType(type, isNotNull),
+                                 Comment = comment,
+								 IsPrimaryKey = isKey,
+								 IsIdentity = isAutoIncr,
+								 IsNotNull = isNotNull
+								 
+                             });
+                             
+                             list.Add(entity);
+                         }
+                         else
+                         {
+                             entity.Fields.Add(new Field
+                             {
+                                 Name = column,
+                                 Type = GetCLRType(type, isNotNull),
+                                 Comment = comment,
+								 IsPrimaryKey = isKey,
+								 IsIdentity = isAutoIncr,
+								 IsNotNull = isNotNull
+                             });
+                         }
+                     }
+                 }
+             }
+             finally
+             {
+                 conn.Close();
+             }
+ 
+             return list;
+         }
+
+         public static string GetCLRType(string dbType, bool isNotNull)
+         {
+             switch(dbType)
+             {
+				 case "bigint":
+					  if(!isNotNull) return "long?";
+                     return "long";
+                 case "tinyint":
+                 case "smallint":
+                 case "mediumint":
+                 case "int":
+                 case "integer":
+					 if(!isNotNull) return "int?";
+                     return "int";
+                 case "double":
+					 if(!isNotNull) return "double?";
+                     return "double";
+                 case "float":
+				     if(!isNotNull) return "float?";
+                     return "float";
+                 case "decimal":
+                     
+                 case "numeric":
+                 case "real":
+					 if(!isNotNull) return "decimal?";
+                     return "decimal";
+                 case "bit":
+                     if(!isNotNull) return "bool?"; 
+					 return "bool";
+                 case "date":
+                 case "time":
+                 case "year":
+                 case "datetime":
+                 case "timestamp":
+                     if(!isNotNull) return "DateTime?"; 
+					 return "DateTime";
+                 case "tinyblob":
+                 case "blob":
+                 case "mediumblob":
+                 case "longblog":
+                 case "binary":
+                 case "varbinary":
+                     return "byte[]";
+                 case "char":
+                 case "varchar":                    
+                 case "tinytext":
+                 case "text":
+                 case "mediumtext":
+                 case "longtext":
+                     return "string";
+                 case "point":
+                 case "linestring":
+                 case "polygon":
+                 case "geometry":
+                 case "multipoint":
+                 case "multilinestring":
+                 case "multipolygon":
+                 case "geometrycollection":
+                 case "enum":
+                 case "set":
+                 default:
+                     return dbType;
+             }
+         }
+     }
+ 
+     public class Entity
+     {
+         public Entity()
+         {
+             this.Fields = new List<Field>();
+         }
+ 
+         public Entity(string name, string tableName)
+             : this()
+         {
+             this.EntityName = name;
+			 this.TableName = tableName;
+			 
+         }
+ 
+		 public string TableName { get;set; }
+         public string EntityName { get;set; }
+         public List<Field> Fields { get;set; }
+     }
+ 
+     public class Field
+     {
+		 public bool IsPrimaryKey {get;set;}
+		 public bool IsIdentity {get;set;}
+		 public bool IsNotNull {get;set;}
+         public string Name { get;set; }
+         public string Type { get;set; }
+         public string Comment { get;set; }
+     }
+
+	 public static class StringUtils
+    {
+
+		//是否将 单词变成单数形式
+		public static bool IsToSingular=false;
+		//生成的类名是否去掉下划线
+		public static bool IsUnderlined=false;
+
+        /// <summary>
+        /// 单词变成单数形式
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static string ToSingular(string word)
+        {
+			if(IsToSingular){
+			     	  Regex plural1 = new Regex("(?<keep>[^aeiou])ies$");
+					Regex plural2 = new Regex("(?<keep>[aeiou]y)s$");
+					Regex plural3 = new Regex("(?<keep>[sxzh])es$");
+					Regex plural4 = new Regex("(?<keep>[^sxzhyu])s$");
+ 
+					if (plural1.IsMatch(word))
+						return plural1.Replace(word, "${keep}y");
+					else if (plural2.IsMatch(word))
+						return plural2.Replace(word, "${keep}");
+					else if (plural3.IsMatch(word))
+						return plural3.Replace(word, "${keep}");
+					else if (plural4.IsMatch(word))
+						return plural4.Replace(word, "${keep}");
+            }
+ 
+            return word;
+        }
+        /// <summary>
+        /// 单词变成复数形式
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static string ToPlural(string word)
+        {
+			if(IsToSingular){
+            Regex plural1 = new Regex("(?<keep>[^aeiou])y$");
+            Regex plural2 = new Regex("(?<keep>[aeiou]y)$");
+            Regex plural3 = new Regex("(?<keep>[sxzh])$");
+            Regex plural4 = new Regex("(?<keep>[^sxzhy])$");
+ 
+            if (plural1.IsMatch(word))
+                return plural1.Replace(word, "${keep}ies");
+            else if (plural2.IsMatch(word))
+                return plural2.Replace(word, "${keep}s");
+            else if (plural3.IsMatch(word))
+                return plural3.Replace(word, "${keep}es");
+            else if (plural4.IsMatch(word))
+                return plural4.Replace(word, "${keep}s");
+             }
+            return word;
+        }
+
+		// 将字符串设置成首字母大写
+		public static string ToFirstUpper(string field)
+		{
+		  string first = field.Substring(0, 1).ToUpperInvariant();
+		  string result = first;
+		  if (field.Length > 1)
+		  {
+			string after = field.Substring(1);
+			result = first + after;
+		  }
+		  return result;
+		}
+
+		// 将字符串设置成首字母大写
+		public static string ToFirstLower(string field)
+		{
+		  string first = field.Substring(0, 1).ToLowerInvariant();
+		  string result = first;
+		  if (field.Length > 1)
+		  {
+			string after = field.Substring(1);
+			result = first + after;
+		  }
+		  return result;
+		}
+
+		public static string GetEntityName(string name)
+        {
+			 string result=name;
+			if(IsUnderlined){
+				string[] arr = name.Split('_');
+			    result = string.Join("",arr.Select(f => ToFirstUpper(f)));
+            }
+			return result;
+		}
+    }
+
+ #>

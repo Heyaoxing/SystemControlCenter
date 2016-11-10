@@ -1,0 +1,47 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ import namespace="MySql.Data.MySqlClient" #>
+<#@ include file="$(SolutionDir)Common\Common.DataEntity\T4\MultipleOutputHelper.ttinclude"#> 
+<#@ include file="$(SolutionDir)Common\Common.DataEntity\T4\EntityHelper.ttinclude" #>
+<#@ include file="$(SolutionDir)Data\Data.Configs\Config.ttinclude" #>
+
+
+
+<#		
+	    
+
+        var databases = new List<string> { config.DbDatabase };
+		var entities = EntityHelper.GetEntities(config.ConnectionString,databases);
+		var manager = Manager.Create(Host, GenerationEnvironment);
+
+		foreach(Entity entity in entities)
+		{	
+			string entityName = StringUtils.GetEntityName(entity.EntityName);
+			manager.StartNewFile(entityName + "Repository.Generated.cs");#>
+//------------------------------------------------------------------------------
+// 警告:
+//     该代码由T4工具根据模板自动生成,直接在该代码上进行任何修改都将在重新生成后丢失!
+//     如有需要应使用partial class或是继承该类进行自定义扩展。
+//------------------------------------------------------------------------------
+using System;
+using  Common.Repository;
+using  Common.DataEntity;
+using MySqlSugar;
+using MySql.Data.MySqlClient;
+using <#= config.NameSpaceEntity #>;
+	
+namespace <#= config.NameSpaceRepository #>
+{   
+	public partial class <#=entityName#>Repository : Repository<<#=entityName#>>, I<#=entityName#>Repository
+	{		
+		public <#=entityName#>Repository() : base(MySugarDao.GetInstance())
+	    {
+	    }
+	}
+}
+	
+<#
+		manager.EndBlock();    
+         }            
+       manager.Process(true);  
+#>
+

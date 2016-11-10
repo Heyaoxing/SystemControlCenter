@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45882D27-35AA-49E1-A05E-989510FC974D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test.Console.Data</RootNamespace>
+    <AssemblyName>Test.Console.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.DataEntity\Common.DataEntity.csproj">
+      <Project>{bd34e03a-678d-4dea-ac36-f3a71ac5ec7a}</Project>
+      <Name>Common.DataEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.Repository\Common.Repository.SqlSugar.csproj">
+      <Project>{20F5D29C-BB62-461D-82C2-D9CCAB707DFD}</Project>
+      <Name>Common.Repository.SqlSugar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\MySqlSugar\MySqlSugar.csproj">
+      <Project>{46a17e67-7e3e-4369-9b1f-43ba34bbdaef}</Project>
+      <Name>MySqlSugar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.Entities\Data.Entities.csproj">
+      <Project>{b2b70ce5-1669-4cfb-8305-7a986f6b890c}</Project>
+      <Name>Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.Repositories\Data.Repositories.csproj">
+      <Project>{1526aafb-d4e8-480d-9002-7845a6031214}</Project>
+      <Name>Data.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IServices.Demo\IServices.Demo.csproj">
+      <Project>{7207ad13-3a0d-4b15-945b-00551ea0aeaf}</Project>
+      <Name>IServices.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\Services.Demo\Services.Demo.csproj">
+      <Project>{8ec55d6c-2dd9-4f2e-b1d9-ceeb25bbe29e}</Project>
+      <Name>Services.Demo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+﻿<#@ assembly name="System.Core"#>
+<#+     
+////*配置信息（须手工修复）
+public class config
+{
+	public static readonly string ConnectionString="Server=localhost;Database=test;Uid=root;Pwd=123456;Charset=utf8;";
+	public static readonly string DbDatabase="test";
+	public static readonly string NameSpaceEntity="Data.Entities";
+	public static readonly string NameSpaceRepository="Data.Repositories";
+}
+#>

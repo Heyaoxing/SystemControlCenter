@@ -1,0 +1,15 @@
+E:\GitHub\MyFramework\MyFramework\Services\IServices.Demo\bin\Debug\IServices.Demo.dll
+E:\GitHub\MyFramework\MyFramework\Services\IServices.Demo\bin\Debug\IServices.Demo.pdb
+E:\GitHub\MyFramework\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.csprojResolveAssemblyReference.cache
+E:\GitHub\MyFramework\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.dll
+E:\GitHub\MyFramework\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.pdb
+E:\GitHub\SystemControlCenter\MyFramework\Services\IServices.Demo\bin\Debug\IServices.Demo.dll
+E:\GitHub\SystemControlCenter\MyFramework\Services\IServices.Demo\bin\Debug\IServices.Demo.pdb
+E:\GitHub\SystemControlCenter\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.csprojResolveAssemblyReference.cache
+E:\GitHub\SystemControlCenter\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.dll
+E:\GitHub\SystemControlCenter\MyFramework\Services\IServices.Demo\obj\Debug\IServices.Demo.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IServices.Demo\bin\Debug\IServices.Demo.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IServices.Demo\bin\Debug\IServices.Demo.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IServices.Demo\obj\Debug\IServices.Demo.csprojResolveAssemblyReference.cache
+E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IServices.Demo\obj\Debug\IServices.Demo.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IServices.Demo\obj\Debug\IServices.Demo.pdb
