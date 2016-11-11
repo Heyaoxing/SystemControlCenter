@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "AngularJS";
+    ViewBag.TitleSmall = "学习";
+}
+<div ng-app="myApp" ng-controller="myCtrl">
+    名字: <input ng-model="name">
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.name = "John Doe";
+    });
+</script>
