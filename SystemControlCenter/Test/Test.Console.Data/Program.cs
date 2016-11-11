@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using Autofac;
 using Data.Entities;
 using Data.Repositories;
-using IServices.Demo;
-using MySqlSugar;
 
 namespace Test.Console.Data
 {
@@ -17,10 +15,15 @@ namespace Test.Console.Data
         {
             try
             {
-                var builder = new ContainerBuilder();
-                builder.RegisterType<Services.Demo.Test>();
-                builder.RegisterType<T_exclude_websitesRepository>().As<IT_exclude_websitesRepository>();
-               
+                DepartmentinfoRepository departmentinfoRepository = new DepartmentinfoRepository();
+                departmentinfoRepository.Insert(new Departmentinfo()
+                {
+                    Name = "测试",
+                    Address = "地址",
+                    Sort = 0,
+                    CreatedOn = DateTime.Now,
+                    UpdatedOn = DateTime.Now
+                });
             }
             catch (Exception exception)
             {

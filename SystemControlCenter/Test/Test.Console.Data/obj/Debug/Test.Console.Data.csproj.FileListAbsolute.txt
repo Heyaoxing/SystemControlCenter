@@ -54,9 +54,7 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.Repository.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Entities.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Repositories.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\IServices.Demo.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\MySqlSugar.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Services.Demo.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\MySql.Data.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.DataEntity.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.Repository.pdb
@@ -64,8 +62,6 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\MySqlSugar.xml
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Entities.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Repositories.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\IServices.Demo.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Services.Demo.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Autofac.xml
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.exe

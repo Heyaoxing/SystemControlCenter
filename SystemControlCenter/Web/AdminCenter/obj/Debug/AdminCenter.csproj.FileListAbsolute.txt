@@ -187,3 +187,7 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\zh-Hans\Sy
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\obj\Debug\AdminCenter.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\obj\Debug\AdminCenter.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\obj\Debug\AdminCenter.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Autofac.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Autofac.Integration.Mvc.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Autofac.xml
+E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Autofac.Integration.Mvc.xml

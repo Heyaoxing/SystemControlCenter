@@ -31,15 +31,14 @@ namespace <#= config.NameSpaceEntity #>
 	/// <summary>
 	/// 实体-<#=entity.EntityName#> 
 	/// </summary>
-	
 	public partial class <#=StringUtils.GetEntityName(entity.EntityName)#> : Entity    
 	{	
 <#foreach (Field dc in entity.Fields) { string entityName = dc.Name; #>
 		/// <summary>  
         /// <#= dc.Comment #>  
         /// </summary>
-
 		public <#= dc.Type#> <#= entityName#> { get; set; }  
+
 <#}#>
 		
 	}

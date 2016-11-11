@@ -75,14 +75,6 @@
       <Project>{1526aafb-d4e8-480d-9002-7845a6031214}</Project>
       <Name>Data.Repositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Services\IServices.Demo\IServices.Demo.csproj">
-      <Project>{7207ad13-3a0d-4b15-945b-00551ea0aeaf}</Project>
-      <Name>IServices.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Services\Services.Demo\Services.Demo.csproj">
-      <Project>{8ec55d6c-2dd9-4f2e-b1d9-ceeb25bbe29e}</Project>
-      <Name>Services.Demo</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -42,27 +42,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\ITExcludeWebsitesRepository.cs" />
+    <Compile Include="Generated\ApplicationinfoRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DepartmentinfoRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IApplicationinfoRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IDepartmentinfoRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IMenuinfoRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IMenuoperationrelationRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IMenuroleoperationRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IOperationinfoRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\IPersoninfoRepository.Generated.cs">
+      <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
     <Compile Include="Generated\IRepositories.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IRepositories.tt</DependentUpon>
     </Compile>
-    <Compile Include="Generated\IT_exclude_websitesRepository.Generated.cs">
+    <Compile Include="Generated\IRoleinfoRepository.Generated.cs">
       <DependentUpon>IRepositories.tt</DependentUpon>
     </Compile>
-    <Compile Include="Generated\IT_filter_rule_configurationRepository.Generated.cs">
+    <Compile Include="Generated\IRolepersonrelationRepository.Generated.cs">
       <DependentUpon>IRepositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MenuinfoRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MenuoperationrelationRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\MenuroleoperationRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\OperationinfoRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\PersoninfoRepository.Generated.cs">
+      <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
     <Compile Include="Generated\Repositories.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
-    <Compile Include="Generated\T_exclude_websitesRepository.Generated.cs">
+    <Compile Include="Generated\RoleinfoRepository.Generated.cs">
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
-    <Compile Include="Generated\T_filter_rule_configurationRepository.Generated.cs">
+    <Compile Include="Generated\RolepersonrelationRepository.Generated.cs">
       <DependentUpon>Repositories.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,7 +139,9 @@
       <Name>Data.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
