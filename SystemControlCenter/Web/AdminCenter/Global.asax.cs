@@ -8,6 +8,9 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Business.Services;
+using Data.Repositories;
+using IBusiness.Services;
 
 namespace AdminCenter
 {
@@ -21,7 +24,7 @@ namespace AdminCenter
             builder.RegisterControllers(Assembly.GetExecutingAssembly()).PropertiesAutowired();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-            
+
 
 
             AreaRegistration.RegisterAllAreas();
@@ -32,8 +35,13 @@ namespace AdminCenter
 
         private void SetupResolveRules(ContainerBuilder builder)
         {
+            #region 数据仓库
+            builder.RegisterType<DepartmentinfoRepository>().As<IDepartmentinfoRepository>();
+            #endregion
 
-          
+            #region 服务
+            builder.RegisterType<DepartmentService>().As<IDepartmentService>();
+            #endregion
         }
     }
 }

@@ -28,6 +28,7 @@ E:\GitHub\SystemControlCenter\MyFramework\Data\Data.Repositories\bin\Debug\Data.
 E:\GitHub\SystemControlCenter\MyFramework\Data\Data.Repositories\obj\Debug\Data.Repositories.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\MyFramework\Data\Data.Repositories\obj\Debug\Data.Repositories.dll
 E:\GitHub\SystemControlCenter\MyFramework\Data\Data.Repositories\obj\Debug\Data.Repositories.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\MySqlSugar.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Data.Repositories.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Data.Repositories.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Common.DataEntity.dll
@@ -37,7 +38,6 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\MySqlSugar.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Common.DataEntity.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Common.Repository.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\MySqlSugar.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\MySqlSugar.xml
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Data.Entities.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\obj\Debug\Data.Repositories.csprojResolveAssemblyReference.cache

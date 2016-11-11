@@ -49,7 +49,6 @@ E:\GitHub\SystemControlCenter\MyFramework\Test\Test.Console.Data\obj\Debug\Test.
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Test.Console.Data.exe.config
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Test.Console.Data.exe
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Test.Console.Data.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Autofac.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.DataEntity.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.Repository.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Entities.dll
@@ -62,7 +61,6 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\MySqlSugar.xml
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Entities.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Data.Repositories.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Autofac.xml
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.exe
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.pdb

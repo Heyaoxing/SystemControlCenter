@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data.Entities;
+using IBusiness.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,13 +14,19 @@ namespace AdminLteMvc.Controllers
     /// </summary>
     public class AdminLteController : Controller
     {
+        private readonly IDepartmentService _departmentService;
+        public AdminLteController(IDepartmentService departmentService)
+        {
+            _departmentService = departmentService;
+        }
         /// <summary>
         /// The home page of the AdminLTE demo dashboard, recreated in this new system
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
         {
-            return View();
+            Departmentinfo model = _departmentService.GetFirst();
+            return View(model);
         }
 
         /// <summary>
@@ -26,6 +34,11 @@ namespace AdminLteMvc.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult Colors()
+        {
+            return View();
+        }
+
+        public ActionResult Test()
         {
             return View();
         }

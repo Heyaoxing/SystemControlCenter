@@ -43,6 +43,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.DataEntity\Common.DataEntity.csproj">
+      <Project>{bd34e03a-678d-4dea-ac36-f3a71ac5ec7a}</Project>
+      <Name>Common.DataEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.Repository\Common.Repository.SqlSugar.csproj">
+      <Project>{20f5d29c-bb62-461d-82c2-d9ccab707dfd}</Project>
+      <Name>Common.Repository.SqlSugar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\MySqlSugar\MySqlSugar.csproj">
+      <Project>{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}</Project>
+      <Name>MySqlSugar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.Entities\Data.Entities.csproj">
+      <Project>{B2B70CE5-1669-4CFB-8305-7A986F6B890C}</Project>
+      <Name>Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.Repositories\Data.Repositories.csproj">
+      <Project>{1526AAFB-D4E8-480D-9002-7845A6031214}</Project>
+      <Name>Data.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IBusiness.Services\IBusiness.Services.csproj">
       <Project>{FD85CFC7-FEB3-4B51-8AFE-F6A8428306A8}</Project>
       <Name>IBusiness.Services</Name>

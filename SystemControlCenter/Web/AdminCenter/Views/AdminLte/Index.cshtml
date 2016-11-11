@@ -1,8 +1,4 @@
-﻿@* 
-    This is the example main content of the AdminLTE demo and represents a good smattering of AdminLTE functionality in a cshtml
-    TODO: Delete this file when you're ready to start building your app
- *@
-
+﻿@model Data.Entities.Departmentinfo
 @{
     // Layout set automatially in _ViewStart.cshtml
     
@@ -27,7 +23,7 @@
         <div class="info-box">
             <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-text">@Model.Name</span>
                 <span class="info-box-number">90<small>%</small></span>
             </div><!-- /.info-box-content -->
         </div><!-- /.info-box -->
