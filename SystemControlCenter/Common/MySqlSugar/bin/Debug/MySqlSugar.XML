@@ -576,16 +576,6 @@
             语言
             </summary>
         </member>
-        <member name="F:MySqlSugar.PubModel.Language.ReplaceViewStringKey">
-            <summary>
-            需要全局替换的字符串Key(用于替换默认语言)
-            </summary>
-        </member>
-        <member name="F:MySqlSugar.PubModel.Language.ReplaceViewStringValue">
-            <summary>
-            需要全局替换的字符串Value(用于替换默认语言)
-            </summary>
-        </member>
         <member name="P:MySqlSugar.PubModel.Language.Suffix">
             <summary>
             数据库里面的语言后缀
@@ -594,6 +584,16 @@
         <member name="P:MySqlSugar.PubModel.Language.LanguageValue">
             <summary>
             数据库语言的VALUE
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.PubModel.Language.ReplaceViewStringKey">
+            <summary>
+            需要全局替换的字符串Key(用于替换默认语言)
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.PubModel.Language.ReplaceViewStringValue">
+            <summary>
+            需要全局替换的字符串Value(用于替换默认语言)
             </summary>
         </member>
         <member name="T:MySqlSugar.ResolveExpress">
@@ -648,26 +648,6 @@
             ** 使用说明：
             </summary>
         </member>
-        <member name="F:MySqlSugar.Queryable`1.DB">
-            <summary>
-            数据接口
-            </summary>
-        </member>
-        <member name="F:MySqlSugar.Queryable`1.Where">
-            <summary>
-            Where临时数据
-            </summary>
-        </member>
-        <member name="F:MySqlSugar.Queryable`1.Params">
-            <summary>
-            SqlParameter临时数据
-            </summary>
-        </member>
-        <member name="F:MySqlSugar.Queryable`1.WhereIndex">
-            <summary>
-            条件索引
-            </summary>
-        </member>
         <member name="P:MySqlSugar.Queryable`1.TName">
             <summary>
             T的名称
@@ -676,6 +656,16 @@
         <member name="P:MySqlSugar.Queryable`1.Type">
             <summary>
             实体类型
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.Queryable`1.DB">
+            <summary>
+            数据接口
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.Queryable`1.Where">
+            <summary>
+            Where临时数据
             </summary>
         </member>
         <member name="P:MySqlSugar.Queryable`1.Skip">
@@ -698,6 +688,11 @@
             Select临时数据
             </summary>
         </member>
+        <member name="F:MySqlSugar.Queryable`1.Params">
+            <summary>
+            SqlParameter临时数据
+            </summary>
+        </member>
         <member name="P:MySqlSugar.Queryable`1.TableName">
             <summary>
             表名
@@ -706,6 +701,11 @@
         <member name="P:MySqlSugar.Queryable`1.GroupBy">
             <summary>
             分组查询
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.Queryable`1.WhereIndex">
+            <summary>
+            条件索引
             </summary>
         </member>
         <member name="T:MySqlSugar.QueryableExtensions">
@@ -1016,19 +1016,14 @@
             数据接口
             </summary>
         </member>
-        <member name="F:MySqlSugar.Sqlable.Where">
-            <summary>
-            Where临时数据
-            </summary>
-        </member>
-        <member name="F:MySqlSugar.Sqlable.Params">
-            <summary>
-            参数
-            </summary>
-        </member>
         <member name="P:MySqlSugar.Sqlable.Sql">
             <summary>
             sql临时数据
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.Sqlable.Where">
+            <summary>
+            Where临时数据
             </summary>
         </member>
         <member name="P:MySqlSugar.Sqlable.OrderBy">
@@ -1039,6 +1034,11 @@
         <member name="P:MySqlSugar.Sqlable.GroupBy">
             <summary>
             GroupBy临时数据
+            </summary>
+        </member>
+        <member name="F:MySqlSugar.Sqlable.Params">
+            <summary>
+            参数
             </summary>
         </member>
         <member name="T:MySqlSugar.SqlableExtensions">
@@ -1273,7 +1273,17 @@
             </summary>
             <param name="mappingTables"></param>
         </member>
-        <!-- 对于成员“M:MySqlSugar.SqlSugarClient.SetSerialNumber(System.Collections.Generic.List{MySqlSugar.PubModel.SerialNumber})”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:MySqlSugar.SqlSugarClient.SetSerialNumber(System.Collections.Generic.List{MySqlSugar.PubModel.SerialNumber})" -->
+        <member name="P:MySqlSugar.SqlSugarClient.IsNoLock">
+            <summary>
+            查询是否允许脏读，（默认为:true）
+            </summary>
+        </member>
+        <member name="P:MySqlSugar.SqlSugarClient.DisableUpdateColumns">
+            <summary>
+            设置禁止更新的列
+            </summary>
+        </member>
         <member name="F:MySqlSugar.SqlSugarClient.SerializerDateFormat">
             <summary>
             设置序列化实体转成JSON的日期格式
@@ -1459,16 +1469,6 @@
             清除所有缓存
             </summary>
         </member>
-        <member name="P:MySqlSugar.SqlSugarClient.IsNoLock">
-            <summary>
-            查询是否允许脏读，（默认为:true）
-            </summary>
-        </member>
-        <member name="P:MySqlSugar.SqlSugarClient.DisableUpdateColumns">
-            <summary>
-            设置禁止更新的列
-            </summary>
-        </member>
         <member name="T:MySqlSugar.CacheManager`1">
             <summary>
             ** 描述：缓存操作类
@@ -1480,13 +1480,11 @@
             <typeparam name="K">键</typeparam>
             <typeparam name="V">值</typeparam>
         </member>
-        <member name="T:MySqlSugar.IHttpStorageObject`1">
-            <summary>
-            ** 描述：http存储对象接口
-            ** 创始时间：2015-5-29
-            ** 修改时间：-
-            ** 作者：sunkaixuan
-            </summary>
+        <member name="P:MySqlSugar.CacheManager`1.Item(System.String)">
+             <summary>         
+            根据key获取value     
+             </summary>         
+             <value></value>      
         </member>
         <member name="M:MySqlSugar.CacheManager`1.ContainsKey(System.String)">
             <summary>         
@@ -1545,12 +1543,6 @@
             获取所有缓存key
             </summary>
             <returns></returns>
-        </member>
-        <member name="P:MySqlSugar.CacheManager`1.Item(System.String)">
-             <summary>         
-            根据key获取value     
-             </summary>         
-             <value></value>      
         </member>
         <member name="T:MySqlSugar.ClassGenerating">
             <summary>
@@ -1963,6 +1955,14 @@
             <param name="strFilePath"></param>
             <param name="strValue"></param>
         </member>
+        <member name="T:MySqlSugar.IHttpStorageObject`1">
+            <summary>
+            ** 描述：http存储对象接口
+            ** 创始时间：2015-5-29
+            ** 修改时间：-
+            ** 作者：sunkaixuan
+            </summary>
+        </member>
         <member name="T:MySqlSugar.IsWhatExtenions">
             <summary>
             ** 描述：逻辑判段是什么？
@@ -2124,7 +2124,7 @@
             ** 使用说明：
             </summary>
         </member>
-        <!-- 对于成员“T:MySqlSugar.SqlSugarToolExtensions”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "T:MySqlSugar.SqlSugarToolExtensions" -->
         <member name="M:MySqlSugar.SqlSugarToolExtensions.ToJoinSqlInVal``1(``0[])">
             <summary>
             数组字串转换成SQL参数格式，例如: 参数 new int{1,2,3} 反回 "'1','2','3'"
