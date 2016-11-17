@@ -45,3 +45,6 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Web\bin\Debug\zh
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Web\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Web\obj\Debug\Common.Web.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Web\obj\Debug\Common.Web.pdb
+E:\Github\SystemControlCenter\SystemControlCenter\Common\Common.Web\obj\Debug\Common.Web.csprojResolveAssemblyReference.cache
+E:\Github\SystemControlCenter\SystemControlCenter\Common\Common.Web\bin\Debug\Common.WebEntity.dll
+E:\Github\SystemControlCenter\SystemControlCenter\Common\Common.Web\bin\Debug\Common.WebEntity.pdb

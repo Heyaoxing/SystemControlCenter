@@ -207,3 +207,7 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\zh-Hans\Sy
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\obj\Debug\AdminCenter.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Web\AdminCenter\obj\Debug\AdminCenter.pdb
+E:\Github\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Common.Web.dll
+E:\Github\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Common.WebEntity.dll
+E:\Github\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Common.WebEntity.pdb
+E:\Github\SystemControlCenter\SystemControlCenter\Web\AdminCenter\bin\Common.Web.pdb

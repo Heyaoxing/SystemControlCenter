@@ -6,3 +6,4 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MyFramework.Common\bin\
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MyFramework.Common\bin\Debug\MyFramework.Common.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MyFramework.Common\obj\Debug\MyFramework.Common.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MyFramework.Common\obj\Debug\MyFramework.Common.pdb
+E:\Github\SystemControlCenter\SystemControlCenter\Common\MyFramework.Common\obj\Debug\MyFramework.Common.csprojResolveAssemblyReference.cache
