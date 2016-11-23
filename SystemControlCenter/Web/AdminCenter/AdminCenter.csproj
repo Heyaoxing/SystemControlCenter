@@ -171,6 +171,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerFilterModel.cs" />
+    <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -791,6 +793,7 @@
     <Content Include="Views\AdminLte\Colors.cshtml" />
     <Content Include="Views\AdminLte\Test.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLteLeftMenu_bak.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

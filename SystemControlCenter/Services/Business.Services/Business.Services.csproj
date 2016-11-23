@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DepartmentService.cs" />
+    <Compile Include="PersoninfoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +51,10 @@
     <ProjectReference Include="..\..\Common\Common.Repository\Common.Repository.SqlSugar.csproj">
       <Project>{20f5d29c-bb62-461d-82c2-d9ccab707dfd}</Project>
       <Name>Common.Repository.SqlSugar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.WebEntity\Common.WebEntity.csproj">
+      <Project>{915810E8-DABF-452D-A33E-F82057132DE6}</Project>
+      <Name>Common.WebEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\MySqlSugar\MySqlSugar.csproj">
       <Project>{46A17E67-7E3E-4369-9B1F-43BA34BBDAEF}</Project>

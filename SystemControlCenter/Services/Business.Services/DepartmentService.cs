@@ -12,7 +12,7 @@ namespace Business.Services
 {
     public class DepartmentService : IDepartmentService
     {
-        public IDepartmentinfoRepository _departmentinfoRepository;
+        private IDepartmentinfoRepository _departmentinfoRepository;
 
         public DepartmentService(IDepartmentinfoRepository departmentinfoRepository)
         {

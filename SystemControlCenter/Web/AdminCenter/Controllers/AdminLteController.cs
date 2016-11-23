@@ -25,8 +25,8 @@ namespace AdminLteMvc.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            Departmentinfo model = _departmentService.GetFirst();
-            return View(model);
+           // Departmentinfo model = _departmentService.GetFirst();
+            return View();
         }
 
         /// <summary>

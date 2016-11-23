@@ -12,14 +12,17 @@ namespace AdminCenter.Controllers
     public class PersonController : Controller
     {
         // GET: Person
-        public ActionResult Index(int pageindex=1)
+        public ActionResult Index(CustomerFilterModel filter)
         {
+            CustomerViewModel filterModel =new CustomerViewModel();
+            filterModel.CustomerParam=new Customer();
+            filterModel.CustomerParam.Name = "测试";
             List<Customer> data = Bind();
-            PagedList<Customer> InfoPager = data.AsQueryable().ToPagedList(pageindex, 2);
-            InfoPager.TotalItemCount = data.Count;
-            InfoPager.CurrentPageIndex = pageindex;
+            filterModel.PagedList = data.AsQueryable().ToPagedList(filter.PageIndex, 2);
+            filterModel.PagedList.TotalItemCount = data.Count;
+            filterModel.PagedList.CurrentPageIndex = filter.PageIndex;
 
-            return View(InfoPager);
+            return View(filterModel);
         }
 
         private List<Customer> Bind()

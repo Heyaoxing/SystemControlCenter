@@ -1,9 +1,0 @@
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\obj\Debug\IBusiness.Services.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\obj\Debug\IBusiness.Services.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\IBusiness.Services.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\IBusiness.Services.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\Common.DataEntity.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\Data.Entities.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\Common.DataEntity.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\bin\Debug\Data.Entities.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Services\IBusiness.Services\obj\Debug\IBusiness.Services.csprojResolveAssemblyReference.cache
