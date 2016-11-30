@@ -12,3 +12,4 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Core\bin\Debug\Data.
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Core\bin\Debug\Data.Core.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Core\obj\Debug\Data.Core.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Core\obj\Debug\Data.Core.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Core\obj\Debug\Data.Core.csprojResolveAssemblyReference.cache

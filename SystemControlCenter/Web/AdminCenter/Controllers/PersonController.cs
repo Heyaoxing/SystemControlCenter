@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AdminCenter.Models;
-using Common.Web.PageHelper;
 using Common.WebEntity;
+using Webdiyer.WebControls.Mvc;
 
 namespace AdminCenter.Controllers
 {
@@ -21,6 +21,11 @@ namespace AdminCenter.Controllers
             filterModel.PagedList = data.AsQueryable().ToPagedList(filter.PageIndex, 2);
             filterModel.PagedList.TotalItemCount = data.Count;
             filterModel.PagedList.CurrentPageIndex = filter.PageIndex;
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_List", filterModel);
+            }
 
             return View(filterModel);
         }

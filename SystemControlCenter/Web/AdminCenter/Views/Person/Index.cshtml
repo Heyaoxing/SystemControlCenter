@@ -1,7 +1,6 @@
 ﻿@using AdminCenter.Models;
-@using Common.Web
-@using Common.Web.PageHelper
 @using Common.WebEntity;
+@using Webdiyer.WebControls.Mvc
 @model CustomerViewModel
 @{
     ViewBag.Title = "角色管理";
@@ -10,37 +9,28 @@
 
 <div class="row">
     <div class="col-md-12">
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Collapsable</h3>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                            <i class="fa fa-minus"></i>
-                        </button>
-                    </div>
-                    <!-- /.box-tools -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Collapsable</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
                 </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    The body of the box
-                </div>
-                <!-- /.box-body -->
+                <!-- /.box-tools -->
             </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                The body of the box
+            </div>
+            <!-- /.box-body -->
+        </div>
     </div><!-- /.col -->
 </div><!-- /.row -->
-
-<table class="table">
-        @foreach (var info in Model.PagedList)
-        {
-            <tr>
-                <td>@Html.DisplayFor(model => info.Id)</td>
-                <td>@Html.DisplayFor(model => info.Name)</td>
-                <td>@Html.DisplayFor(model => info.Descript)</td>
-            </tr>
-        }
-    </table>
-    <div class="text-center">
-        <nav>
-            @Html.Pager(Model.PagedList, new PagerOptions(),null,Model.CustomerParam)
-        </nav>
-    </div>
+<div id="persons">
+    @Html.Partial("_List", Model)
+</div>
+@section scripts
+{
+    @{Html.RegisterMvcPagerScriptResource();}
+}

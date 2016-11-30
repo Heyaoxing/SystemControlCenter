@@ -1,0 +1,19 @@
+﻿@using AdminCenter.Models;
+@using Common.WebEntity;
+@using Webdiyer.WebControls.Mvc
+@model CustomerViewModel
+<table class="table">
+    @foreach (var info in Model.PagedList)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => info.Id)</td>
+            <td>@Html.DisplayFor(model => info.Name)</td>
+            <td>@Html.DisplayFor(model => info.Descript)</td>
+        </tr>
+    }
+</table>
+<div class="text-center">
+    <nav>
+        @Ajax.Pager(Model.PagedList, new PagerOptions() { CssClass = "pagination", CurrentPagerItemTemplate = "<li class=\"active\"><a href=\"javascript:void(0);\">{0}</a></li>", DisabledPagerItemTemplate = "<li class=\"disabled\"><a>{0}</a></li>", PagerItemTemplate = "<li>{0}</li>" }).AjaxOptions(p => p.SetUpdateTargetId("persons"))
+    </nav>
+</div>
