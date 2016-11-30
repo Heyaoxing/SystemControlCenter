@@ -92,7 +92,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MvcPagerResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="PageLinqExtensions.cs" />
     <Compile Include="PagerBuilder.cs" />
     <Compile Include="PagerExtensions.cs" />
     <Compile Include="PagerItem.cs" />

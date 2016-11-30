@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Data;
+using Common.WebEntity;
 
 namespace MySqlSugar
 {
@@ -551,6 +552,27 @@ namespace MySqlSugar
             return queryable.ToList();
         }
 
+        /// <summary>
+        /// 专门用于分页控件
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="allItems"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public static PagedList<T> ToPagedList<T>(this Queryable<T> allItems, int pageIndex, int pageSize)
+        {
+            if (pageIndex < 1)
+                pageIndex = 1;
+            var itemIndex = (pageIndex - 1) * pageSize;
+            var totalItemCount = allItems.Count();
+            while (totalItemCount <= itemIndex && pageIndex > 1)
+            {
+                itemIndex = (--pageIndex - 1) * pageSize;
+            }
+            var pageOfItems = allItems.Skip(itemIndex).Take(pageSize).ToList();
+            return new PagedList<T>(pageOfItems, pageIndex, pageSize, totalItemCount);
+        }
 
     }
 }

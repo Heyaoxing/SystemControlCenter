@@ -48,6 +48,10 @@
       <Project>{BD34E03A-678D-4DEA-AC36-F3A71AC5EC7A}</Project>
       <Name>Common.DataEntity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.WebEntity\Common.WebEntity.csproj">
+      <Project>{915810E8-DABF-452D-A33E-F82057132DE6}</Project>
+      <Name>Common.WebEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\Data.Entities\Data.Entities.csproj">
       <Project>{B2B70CE5-1669-4CFB-8305-7A986F6B890C}</Project>
       <Name>Data.Entities</Name>

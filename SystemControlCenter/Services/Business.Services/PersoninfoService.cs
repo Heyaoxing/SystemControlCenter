@@ -7,10 +7,11 @@ using Common.WebEntity;
 using Data.Entities;
 using Data.Repositories;
 using IBusiness.Services;
+using MySqlSugar;
 
 namespace Business.Services
 {
-    public class PersoninfoService: IPersoninfoService
+    public class PersoninfoService : IPersoninfoService
     {
         private IPersoninfoRepository _personinfoRepository;
 
@@ -18,8 +19,14 @@ namespace Business.Services
         {
             _personinfoRepository = personinfoRepository;
         }
-        //public IPagedList<Personinfo> GetList()
-        //{
-        //}
+        /// <summary>
+        /// 获取角色所有列表
+        /// </summary>
+        /// <returns></returns>
+        public IPagedList<Personinfo> GetList()
+        {
+            PagedList<Personinfo> pagedList = _personinfoRepository.Queryable().OrderBy("PersonId").ToPagedList(1,10);
+            return pagedList;
+        }
     }
 }

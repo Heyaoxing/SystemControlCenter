@@ -33,3 +33,5 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\My
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.csprojResolveAssemblyReference.cache
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.pdb

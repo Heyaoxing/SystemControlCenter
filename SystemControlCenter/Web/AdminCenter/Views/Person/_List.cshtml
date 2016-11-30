@@ -1,14 +1,14 @@
 ﻿@using AdminCenter.Models;
 @using Common.WebEntity;
 @using Webdiyer.WebControls.Mvc
-@model CustomerViewModel
+@model PersonViewModel
 <table class="table">
     @foreach (var info in Model.PagedList)
     {
         <tr>
-            <td>@Html.DisplayFor(model => info.Id)</td>
+            <td>@Html.DisplayFor(model => info.PersonId)</td>
             <td>@Html.DisplayFor(model => info.Name)</td>
-            <td>@Html.DisplayFor(model => info.Descript)</td>
+            <td>@Html.DisplayFor(model => info.Address)</td>
         </tr>
     }
 </table>

@@ -37,10 +37,12 @@ namespace AdminCenter
         {
             #region 数据仓库
             builder.RegisterType<DepartmentinfoRepository>().As<IDepartmentinfoRepository>();
+            builder.RegisterType<PersoninfoRepository>().As<IPersoninfoRepository>();
             #endregion
 
             #region 服务
             builder.RegisterType<DepartmentService>().As<IDepartmentService>();
+            builder.RegisterType<PersoninfoService>().As<IPersoninfoService>();
             #endregion
         }
     }

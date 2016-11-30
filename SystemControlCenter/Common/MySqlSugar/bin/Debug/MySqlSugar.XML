@@ -1002,6 +1002,16 @@
             <param name="pageSize">每页显示数量</param>
             <returns></returns>
         </member>
+        <member name="M:MySqlSugar.QueryableExtensions.ToPagedList``1(MySqlSugar.Queryable{``0},System.Int32,System.Int32)">
+            <summary>
+            专门用于分页控件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="allItems"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
         <member name="T:MySqlSugar.Sqlable">
             <summary>
             ** 描述：Queryable是多表查询基类，基于拥有大量查询扩展函数

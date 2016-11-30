@@ -85,6 +85,12 @@
     <Compile Include="Tool\SqlSugarToolExtensions.cs" />
     <Compile Include="Tool\SqlSugarTool.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.WebEntity\Common.WebEntity.csproj">
+      <Project>{915810E8-DABF-452D-A33E-F82057132DE6}</Project>
+      <Name>Common.WebEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

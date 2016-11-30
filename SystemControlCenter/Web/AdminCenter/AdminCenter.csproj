@@ -173,6 +173,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerFilterModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

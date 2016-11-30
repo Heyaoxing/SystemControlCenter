@@ -5,29 +5,38 @@ using System.Web;
 using System.Web.Mvc;
 using AdminCenter.Models;
 using Common.WebEntity;
+using IBusiness.Services;
 using Webdiyer.WebControls.Mvc;
 
 namespace AdminCenter.Controllers
 {
     public class PersonController : Controller
     {
-        // GET: Person
-        public ActionResult Index(CustomerFilterModel filter)
+        private readonly IPersoninfoService _ipersPersoninfoService;
+        public PersonController(IPersoninfoService ipersPersoninfoService)
         {
-            CustomerViewModel filterModel =new CustomerViewModel();
-            filterModel.CustomerParam=new Customer();
-            filterModel.CustomerParam.Name = "测试";
-            List<Customer> data = Bind();
-            filterModel.PagedList = data.AsQueryable().ToPagedList(filter.PageIndex, 2);
-            filterModel.PagedList.TotalItemCount = data.Count;
-            filterModel.PagedList.CurrentPageIndex = filter.PageIndex;
+            _ipersPersoninfoService = ipersPersoninfoService;
+        }
+
+        // GET: Person
+        public ActionResult Index()
+        {
+            //CustomerViewModel filterModel =new CustomerViewModel();
+            //filterModel.CustomerParam=new Customer();
+            //filterModel.CustomerParam.Name = "测试";
+            //List<Customer> data = Bind();
+            //filterModel.PagedList = data.AsQueryable().ToPagedList(filter.PageIndex, filter.PageIndex);
+            //filterModel.PagedList.TotalItemCount = data.Count;
+            //filterModel.PagedList.CurrentPageIndex = filter.PageIndex;
+            PersonViewModel personView=new PersonViewModel();
+            personView.PagedList=_ipersPersoninfoService.GetList();
 
             if (Request.IsAjaxRequest())
             {
-                return PartialView("_List", filterModel);
+                return PartialView("_List", personView);
             }
 
-            return View(filterModel);
+            return View(personView);
         }
 
         private List<Customer> Bind()

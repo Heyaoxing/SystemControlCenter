@@ -45,6 +45,7 @@
     <Compile Include="IPagedList.cs" />
     <Compile Include="IViewModel.cs" />
     <Compile Include="PagedList.cs" />
+    <Compile Include="PageLinqExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -43,3 +43,5 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\obj\Debug\Data.Repositories.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\obj\Debug\Data.Repositories.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\obj\Debug\Data.Repositories.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Common.WebEntity.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Repositories\bin\Debug\Common.WebEntity.pdb

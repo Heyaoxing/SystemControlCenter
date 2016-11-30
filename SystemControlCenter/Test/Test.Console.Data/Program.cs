@@ -15,7 +15,7 @@ namespace Test.Console.Data
             try
             {
                 DepartmentinfoRepository departmentinfoRepository = new DepartmentinfoRepository();
-       
+
             }
             catch (Exception exception)
             {
