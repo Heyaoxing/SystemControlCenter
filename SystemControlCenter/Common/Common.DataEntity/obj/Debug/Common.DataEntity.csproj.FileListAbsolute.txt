@@ -12,3 +12,4 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.DataEntity\bin\D
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.DataEntity\bin\Debug\Common.DataEntity.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.DataEntity\obj\Debug\Common.DataEntity.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.DataEntity\obj\Debug\Common.DataEntity.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.DataEntity\obj\Debug\Common.DataEntity.csprojResolveAssemblyReference.cache

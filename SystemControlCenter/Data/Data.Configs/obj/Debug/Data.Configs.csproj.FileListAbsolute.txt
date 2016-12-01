@@ -25,3 +25,5 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\bin\Debug\My
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\obj\Debug\Data.Configs.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\obj\Debug\Data.Configs.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\obj\Debug\Data.Configs.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\bin\Debug\Common.WebEntity.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Data\Data.Configs\bin\Debug\Common.WebEntity.pdb

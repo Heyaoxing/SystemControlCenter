@@ -64,3 +64,5 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Deb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.exe
 E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\obj\Debug\Test.Console.Data.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.WebEntity.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Test\Test.Console.Data\bin\Debug\Common.WebEntity.pdb
