@@ -29,9 +29,9 @@ E:\GitHub\SystemControlCenter\MyFramework\Common\MySqlSugar\obj\Debug\MySqlSugar
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\MySqlSugar.XML
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\MySqlSugar.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\MySqlSugar.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\MySql.Data.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.pdb
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\obj\Debug\MySqlSugar.csprojResolveAssemblyReference.cache
-E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Common\MySqlSugar\bin\Debug\Common.WebEntity.pdb

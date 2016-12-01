@@ -25,11 +25,11 @@ E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\D
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.DataEntity.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\MySql.Data.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\MySqlSugar.dll
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.WebEntity.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.DataEntity.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\MySqlSugar.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\MySqlSugar.xml
+E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.WebEntity.pdb
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\obj\Debug\Common.Repository.SqlSugar.csprojResolveAssemblyReference.cache
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\obj\Debug\Common.Repository.dll
 E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\obj\Debug\Common.Repository.pdb
-E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.WebEntity.dll
-E:\GitHub\SystemControlCenter\SystemControlCenter\Common\Common.Repository\bin\Debug\Common.WebEntity.pdb
