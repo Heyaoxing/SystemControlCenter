@@ -16,17 +16,40 @@ namespace Test.Console.Data
         {
             try
             {
-                while (true)
-                {
-                    Thread.Sleep(100);
-                    Log.Error("测试");
-                }
+                string url = "http://www.cnblogs.com";
+               System.Console.WriteLine(GetMasterHost(url));
             }
             catch (Exception exception)
             {
                 System.Console.WriteLine(exception.Message);
             }
             System.Console.Read();
+        }
+
+        /// <summary>
+        /// 获取主域
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetMasterHost(string url)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(url))
+                    return string.Empty;
+                if (url.Contains(".com.cn"))
+                {
+                    url = url.Replace(".cn", "");
+                }
+                int index = url.LastIndexOf(".", StringComparison.Ordinal);
+                string _url = url.Remove(index);
+                return url.Remove(0, _url.LastIndexOf(".", StringComparison.Ordinal));
+            }
+            catch
+            {
+                // ignored
+            }
+            return string.Empty;
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿@model AdminCenter.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Admin: Log In";
+    Layout =null;
+}
+
+<h1>Log In</h1>
+
+<p>Please log in to access the administrative area:</p>
+@using (Html.BeginForm("Login", "Account"))
+{
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <p><input type="submit" value="Log in" /></p>
+}

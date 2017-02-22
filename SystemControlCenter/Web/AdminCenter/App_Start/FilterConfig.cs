@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using Common.Web.Filters;
 
 namespace AdminCenter
 {
@@ -8,6 +9,7 @@ namespace AdminCenter
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new AuthAttribute());
         }
     }
 }

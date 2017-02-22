@@ -9,6 +9,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Business.Services;
+using Common.Web.Authentication;
 using Data.Repositories;
 using IBusiness.Services;
 
@@ -43,6 +44,7 @@ namespace AdminCenter
             #region 服务
             builder.RegisterType<DepartmentService>().As<IDepartmentService>();
             builder.RegisterType<PersoninfoService>().As<IPersoninfoService>();
+            builder.RegisterType<FormsAuthenticationService>().As<IAuthenticationService>();
             #endregion
         }
     }
