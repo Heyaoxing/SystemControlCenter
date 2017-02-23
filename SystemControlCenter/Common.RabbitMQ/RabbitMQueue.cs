@@ -15,8 +15,8 @@ namespace Common.RabbitMQ
 
         public void PublishMessage(string queue, string messag)
         {
-            string exChange = "fanout";
-            string exchangeType = "fanout";
+            string exChange = "topic";
+            string exchangeType = "topic";
             this.PublishMessage(queue, messag, exChange, exchangeType);
         }
 
