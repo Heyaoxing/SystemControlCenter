@@ -14,5 +14,7 @@ namespace AdminCenter.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        public string BackReturnUrl { set; get; }
     }
 }

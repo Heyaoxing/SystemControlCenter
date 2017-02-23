@@ -19,9 +19,9 @@ namespace AdminCenter.Controllers
         }
 
         [HttpGet]
-        public ActionResult Login()
+        public ActionResult Login(string BackReturnUrl)
         {
-
+            ViewData["BackReturnUrl"] = BackReturnUrl;
             return View();
         }
 

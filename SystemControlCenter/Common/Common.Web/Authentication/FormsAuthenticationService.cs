@@ -58,7 +58,6 @@ namespace Common.Web.Authentication
             {
                 cookie.Domain = FormsAuthentication.CookieDomain;
             }
-
             HttpContext.Current.Response.Cookies.Add(cookie);
             _cachedUserData = userData;
         }

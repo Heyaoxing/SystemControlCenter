@@ -77,6 +77,7 @@
     <Compile Include="Authentication\UserData.cs" />
     <Compile Include="CacheHelper.cs" />
     <Compile Include="CookieHelper.cs" />
+    <Compile Include="DESEncryptHelper.cs" />
     <Compile Include="Filters\AuthAttribute.cs" />
     <Compile Include="JScriptHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
