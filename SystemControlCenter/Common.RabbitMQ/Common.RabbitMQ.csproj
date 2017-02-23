@@ -4,19 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45882D27-35AA-49E1-A05E-989510FC974D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{CD4A416B-40A0-4818-80A0-8B97923B73D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.Console.Data</RootNamespace>
-    <AssemblyName>Test.Console.Data</AssemblyName>
+    <RootNamespace>Common.RabbitMQ</RootNamespace>
+    <AssemblyName>Common.RabbitMQ</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,7 +25,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,7 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RabbitMQ.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.4.1.1\lib\net451\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,47 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="RabbitMQClientContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RabbitMQClientFactory.cs" />
+    <Compile Include="RabbitMQConfig.cs" />
+    <Compile Include="RabbitMQueue.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Common.RabbitMQ\Common.RabbitMQ.csproj">
-      <Project>{cd4a416b-40a0-4818-80a0-8b97923b73d4}</Project>
-      <Name>Common.RabbitMQ</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\Common.DataEntity\Common.DataEntity.csproj">
-      <Project>{bd34e03a-678d-4dea-ac36-f3a71ac5ec7a}</Project>
-      <Name>Common.DataEntity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\Common.Logging\Common.Logging.csproj">
-      <Project>{09b7fa53-1b1c-4199-91bb-0eabe1a280da}</Project>
-      <Name>Common.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\Common.Repository\Common.Repository.SqlSugar.csproj">
-      <Project>{20F5D29C-BB62-461D-82C2-D9CCAB707DFD}</Project>
-      <Name>Common.Repository.SqlSugar</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\MySqlSugar\MySqlSugar.csproj">
-      <Project>{46a17e67-7e3e-4369-9b1f-43ba34bbdaef}</Project>
-      <Name>MySqlSugar</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\Data.Entities\Data.Entities.csproj">
-      <Project>{b2b70ce5-1669-4cfb-8305-7a986f6b890c}</Project>
-      <Name>Data.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\Data.Repositories\Data.Repositories.csproj">
-      <Project>{1526aafb-d4e8-480d-9002-7845a6031214}</Project>
-      <Name>Data.Repositories</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

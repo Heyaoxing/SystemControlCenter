@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Common.Logging;
+using Common.RabbitMQ;
 using Data.Entities;
 using Data.Repositories;
 
@@ -16,8 +17,9 @@ namespace Test.Console.Data
         {
             try
             {
-                string url = "http://www.cnblogs.com";
-               System.Console.WriteLine(GetMasterHost(url));
+                RabbitMQueue reRabbitMQueue=new RabbitMQueue();
+                System.Console.WriteLine(reRabbitMQueue.Count("hyx"));
+               
             }
             catch (Exception exception)
             {
