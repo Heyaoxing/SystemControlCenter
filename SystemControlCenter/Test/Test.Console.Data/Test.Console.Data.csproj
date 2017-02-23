@@ -51,10 +51,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common.RabbitMQ\Common.RabbitMQ.csproj">
-      <Project>{cd4a416b-40a0-4818-80a0-8b97923b73d4}</Project>
-      <Name>Common.RabbitMQ</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\Common.DataEntity\Common.DataEntity.csproj">
       <Project>{bd34e03a-678d-4dea-ac36-f3a71ac5ec7a}</Project>
       <Name>Common.DataEntity</Name>
