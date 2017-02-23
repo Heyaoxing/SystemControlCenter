@@ -20,13 +20,13 @@ namespace Common.Web.Filters
             string url = HttpContext.Current.Request.Url.AbsolutePath;
             string strHost = HttpContext.Current.Request.Url.Host;
             string strPort = HttpContext.Current.Request.Url.Port.ToString();
-            string backUrl = String.Format("http://{0}:{1}{2}", strHost, strPort, HttpContext.Current.Request.RawUrl);
 
             //如果存在身份信息
             if (!HttpContext.Current.User.Identity.IsAuthenticated && url != FormsAuthentication.LoginUrl)
             {
+                string backUrl = String.Format("http://{0}:{1}{2}", strHost, strPort, HttpContext.Current.Request.RawUrl);
                 ContentResult Content = new ContentResult();
-                Content.Content = string.Format("<script type='text/javascript'>alert('请先登录！');window.location.href='{0}?';</script>", FormsAuthentication.LoginUrl);
+                Content.Content = string.Format("<script type='text/javascript'>alert('请先登录！');window.location.href='{0}?BackReturnUrl={1}';</script>", FormsAuthentication.LoginUrl, backUrl.Encrypt());
                 filterContext.Result = Content;
             }
         }

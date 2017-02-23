@@ -11,5 +11,7 @@ namespace Common.Web.Authentication
         void SignIn(UserData userData, bool createPersistentCookie);
 
         void SignOut();
+
+        UserData GetAuthenticatedUserData();
     }
 }

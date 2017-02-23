@@ -6,7 +6,9 @@ using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using System.Web.Security;
 using AdminCenter.Models;
+using Common.Web;
 using Common.Web.Authentication;
+
 
 namespace AdminCenter.Controllers
 {
@@ -21,13 +23,14 @@ namespace AdminCenter.Controllers
         [HttpGet]
         public ActionResult Login(string BackReturnUrl)
         {
-            ViewData["BackReturnUrl"] = BackReturnUrl;
+            ViewBag.BackReturnUrl = BackReturnUrl;
             return View();
         }
 
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
+            var BackReturnUrl = model.BackReturnUrl.Decrypt();
 
             if (ModelState.IsValid)
             {
@@ -35,7 +38,7 @@ namespace AdminCenter.Controllers
                 if (result)
                 {
                     _formsAuthenticationService.SignIn(new UserData() {UserName = model.UserName}, false);
-                    return Redirect(Url.Action("Index", "AdminLte"));
+                    return Redirect(BackReturnUrl);
                 }
                 else
                 {

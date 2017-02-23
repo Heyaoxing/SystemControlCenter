@@ -12,6 +12,6 @@
 {
     @Html.ValidationSummary(true)
     @Html.EditorForModel()
-    <input name="BackReturnUrl" value="" />
+    <input name="BackReturnUrl" value="@ViewBag.BackReturnUrl" type="hidden" />
     <p><input type="submit" value="Log in" /></p>
 }
